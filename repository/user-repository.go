@@ -28,3 +28,8 @@ func FindUserByEmail(email string) (*entities.User, error) {
 	}
 	return &user, nil
 }
+
+func LikeUser(payload *entities.Like) error {
+	var DB = config.DB
+	return DB.Create(&payload).Error
+}

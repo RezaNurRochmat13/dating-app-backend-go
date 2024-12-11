@@ -9,5 +9,5 @@ import (
 
 func RegisterUserRoutes(e *echo.Group) {
 	e.GET("/", controller.GetAllUsers)
-	e.POST("/like", controller.LikeUser)
+	e.POST("/:id/like", controller.LikeUser)
 }
