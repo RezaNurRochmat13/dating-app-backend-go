@@ -36,6 +36,58 @@ Guide how to run application.
 
 API Documentation on these dating apps.
 
+#### Auth
+
+Endpoint of Auth Login
+
+-- Login
+```
+- URL : /api/auth/login
+- Method : POST
+- Request Body : JSON
+{
+  "email": "xxx@xxx.com",
+  "password": "xxx"
+}
+- Response : 200 OK if valid user and generated token
+```
+
+-- Register
+```
+- URL : /api/auth/register
+- Method : POST
+- Request Body : JSON
+{
+  "username": "xxx",  
+  "email": "xxx@xxx.com",
+  "password": "xxx"
+}
+- Response : 201 OK if valid user
+```
+
+#### Like User
+
+Endpoint of liked user
+
+-- Like
+```
+- URL : /api/users/:id/like
+- Method : POST
+- Request Body : JSON
+{
+  "liker_id": "xxx"
+}
+- Response : 200 OK if valid payload
+```
+
+-- All Users
+```
+- URL : /api/users/
+- Method : GET
+- Request Body : -
+- Response : 200 OK
+```
+
 ## Author
 
 - Reza Nur Rochmat <rezanurrochmat@gmail.com>
