@@ -27,6 +27,11 @@ Technology used when built application.
 
 Guide how to run application.
 
+- Clone this repository
+- Setup the databases on config/database.go
+- Run command `go run .`
+- Access the endpoint
+
 ## API Documentation
 
 API Documentation on these dating apps.
