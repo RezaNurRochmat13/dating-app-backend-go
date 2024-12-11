@@ -8,7 +8,7 @@ import (
 
 func MigrateDatabase() {
 	db := config.DB
-	err := db.AutoMigrate(&User{}, &Profile{}, &Matches{}, &Message{})
+	err := db.AutoMigrate(&User{}, &Profile{}, &Matches{}, &Message{}, &Like{})
 	if err != nil {
 		log.Fatalf("Failed to migrate models: %v", err)
 	}

@@ -7,6 +7,6 @@ import (
 )
 
 func RegisterAuthRoutes(e *echo.Group) {
-	e.POST("/register", controller.Register)
+	e.POST("/register", controller.RegisterUser)
 	e.POST("/login", controller.Login)
 }

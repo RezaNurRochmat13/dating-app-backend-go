@@ -30,6 +30,7 @@ func main() {
 
 	// Register routes
 	routes.RegisterAuthRoutes(api.Group("/auth"))
+	routes.RegisterUserRoutes(api.Group("/users"))
 
 	e.GET("/ping", func(c echo.Context) error {
 		return c.String(http.StatusOK, "Ping sucessfully")
