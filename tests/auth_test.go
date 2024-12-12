@@ -53,7 +53,7 @@ func TestRegisterUser(t *testing.T) {
 	body, _ := json.Marshal(payload)
 
 	// Setup Echo context
-	c, rec := setupEcho(http.MethodPost, "/register", body)
+	c, rec := setupEcho(http.MethodPost, "/api/auth/register", body)
 
 	// Call the handler
 	err := service.UserAuthRegister(payload, c)
@@ -91,7 +91,7 @@ func TestLogin(t *testing.T) {
 	body, _ := json.Marshal(payload)
 
 	// Setup Echo context
-	c, rec := setupEcho(http.MethodPost, "/login", body)
+	c, rec := setupEcho(http.MethodPost, "/api/auth/login", body)
 
 	// Call the handler
 	_, err := service.UserAuthLogin(user, c)
